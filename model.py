@@ -87,7 +87,7 @@ model = pickle.load(open(filename, 'rb'))
 
 
 def prediction():
-    test_images = [TEST_FOLDER + i for i in os.listdir("./static/images/")]
+    test_images = [TEST_FOLDER + i for i in os.listdir("dogs_vs_cats_api/static/images")]
     X_test, test_idx = prep_data(test_images)
     X_test = X_test.T
     image = X_test[0].reshape(1, -1)

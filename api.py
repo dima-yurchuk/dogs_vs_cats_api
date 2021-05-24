@@ -10,14 +10,14 @@ app = Flask(__name__, template_folder='templates')
 def main():
     name = ''
     if request.method=='POST':
-        dir = './static/images'
+        dir = 'dogs_vs_cats_api/static/images'
         for f in os.listdir(dir):
             os.remove(os.path.join(dir, f))
         image = request.files['image']
         filename, file_extension = os.path.splitext(secure_filename(image.filename))
         if image and (file_extension=='.png' or file_extension=='.jpg' or file_extension=='.jpeg'):
             img_name = secure_filename(image.filename)
-            image.save(os.path.join('static/images', img_name))
+            image.save(os.path.join(dir, img_name))
             image_class = prediction()
             return render_template('load_image.html', filename=img_name, image_class=image_class)
     return render_template('load_image.html')
