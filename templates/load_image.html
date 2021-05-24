@@ -50,7 +50,7 @@ function manage() {
 </head>
 <body>
 <div align="center">
-    <form method="POST" action="http://localhost:5000/" enctype="multipart/form-data">
+    <form method="POST" action="{{ url_for('main') }}" enctype="multipart/form-data">
         <!-- COMPONENT START -->
         <div style="width: 50%;" class="form-group">
             <div class="input-group input-file" name="image">
