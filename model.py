@@ -4,7 +4,7 @@ import numpy as np
 # %matplotlib inline
 import pickle
 # TRAIN_FOLDER = './train/'
-TEST_FOLDER = './static/images/'
+TEST_FOLDER = 'static/images/'
 
 # train_images = [TRAIN_FOLDER + i for i in os.listdir("./train/")]  # use this for full dataset
 # test_images = [TEST_FOLDER + i for i in os.listdir("./test/")]
@@ -79,7 +79,7 @@ classes = {0: 'cat',
 # model = LogisticRegression(max_iter=30)
 # model.fit(x_train, y_train)
 #
-filename = './static/model.sav'
+filename = 'static/model.sav'
 # pickle.dump(model, open(filename, 'wb'))
 
 # load the model from disk
