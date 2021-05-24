@@ -10,7 +10,7 @@ app = Flask(__name__, template_folder='templates')
 def main():
     name = ''
     if request.method=='POST':
-        dir = 'static/images'
+        dir = app.config["UPLOAD_FOLDER"] + "\images"
         for f in os.listdir(dir):
             os.remove(os.path.join(dir, f))
         image = request.files['image']
