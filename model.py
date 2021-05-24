@@ -79,7 +79,7 @@ classes = {0: 'cat',
 # model = LogisticRegression(max_iter=30)
 # model.fit(x_train, y_train)
 #
-filename = 'static/model.sav'
+filename = './static/model.sav'
 # pickle.dump(model, open(filename, 'wb'))
 
 # load the model from disk
@@ -87,7 +87,7 @@ model = pickle.load(open(filename, 'rb'))
 
 
 def prediction():
-    test_images = [TEST_FOLDER + i for i in os.listdir("static/images/")]
+    test_images = [TEST_FOLDER + i for i in os.listdir("./static/images/")]
     X_test, test_idx = prep_data(test_images)
     X_test = X_test.T
     image = X_test[0].reshape(1, -1)
